@@ -73,6 +73,18 @@ dsh plugin --profile <profile> add github:EnderXiao/dsh-express-cards
 
 禁用整行会同时停掉两半。
 
+## 平台支持
+
+插件没有任何平台相关代码：不访问文件系统、不启动子进程、没有原生模块，manifest 也不限制 `os`/`cpu`。Host 半是零依赖的纯 ESM；Client 半只用 Web API（`navigator.clipboard`、`document.createElement`、`window.open`）。
+
+| 运行环境 | 状态 |
+|---|---|
+| DSH 桌面端（macOS） | 开发与验证环境 |
+| DSH 桌面端（Windows / Linux） | 预期可用——同一套客户端代码、无平台分支——但**未在真机验证** |
+| 浏览器里的 `dsh web` | 同一套代码；`color-mix` 需要 Chromium 111+ / Safari 16.2+，更低版本卡片会使用可读的兜底配色 |
+
+遇到平台问题请在 [issues](https://github.com/EnderXiao/dsh-express-cards/issues) 反馈，附上 DSH 版本与卡片截图。
+
 ## 说明与限制
 
 - 提示词是建议不是保证：模型遵循度会波动，长对话后期或上下文压缩后尤其明显。

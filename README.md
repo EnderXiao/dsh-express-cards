@@ -73,6 +73,18 @@ The plugin declares no Config schema (it has no runtime dependencies), so **Sett
 
 Turning the row off stops both halves.
 
+## Platforms
+
+The plugin has no platform-specific code: no filesystem access, no child processes, no native modules, and no `os`/`cpu` restriction in the manifest. The Host half is plain ESM with zero dependencies; the Client half uses only Web APIs (`navigator.clipboard`, `document.createElement`, `window.open`).
+
+| Surface | Status |
+|---|---|
+| DSH Desktop (macOS) | Developed and verified here |
+| DSH Desktop (Windows / Linux) | Expected to work — same client bundle, no platform branches — but **not verified on real hardware** |
+| `dsh web` in a browser | Same code; `color-mix` needs Chromium 111+ / Safari 16.2+, below that the card keeps a readable fallback color |
+
+Report a platform problem in [issues](https://github.com/EnderXiao/dsh-express-cards/issues) with the DSH version and what the card looks like.
+
 ## Notes and limits
 
 - The prompt is guidance, not a guarantee: models follow it unevenly, especially late in a long conversation or after compaction.

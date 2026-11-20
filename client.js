@@ -96,10 +96,14 @@ window.__ModuleLoader__.load({
       .ec {
         box-sizing: border-box;
         --ec-accent: var(--dsw-alias-brand-primary);
+        /* 先给出不依赖 color-mix 的兜底值：老浏览器（Chromium <111、
+           Safari <16.2）会忽略下一条声明，徽标仍可读。 */
+        --ec-ink: var(--dsw-alias-label-primary);
         --ec-ink: color-mix(in srgb, var(--ec-accent) 55%, var(--dsw-alias-label-primary));
         border: 1px solid var(--dsw-alias-border-l2);
         border-left: 3px solid var(--ec-ink);
         border-radius: var(--dsw-radius-sm);
+        background: var(--dsw-alias-bg-layer-1);
         background: color-mix(in srgb, var(--ec-accent) 4%, var(--dsw-alias-bg-layer-1));
         padding: 10px 12px;
         font-size: var(--dsh-content-font-size, 14px);
