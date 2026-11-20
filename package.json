@@ -41,7 +41,8 @@
     "README.zh.md",
     "CHANGELOG.md",
     "LICENSE",
-    "examples"
+    "examples",
+    "scripts/verify.mjs"
   ],
   "engines": {
     "node": ">=18",
@@ -54,5 +55,8 @@
     "client": {
       "platform": "web"
     }
+  },
+  "scripts": {
+    "verify": "node scripts/verify.mjs"
   }
 }

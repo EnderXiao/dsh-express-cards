@@ -73,6 +73,14 @@ The plugin declares no Config schema (it has no runtime dependencies), so **Sett
 
 Turning the row off stops both halves.
 
+## Verify
+
+```sh
+node scripts/verify.mjs
+```
+
+Runs a headless Chromium check of the parser and the card CSS: parsing edge cases, `color-mix` resolution, in-card columns, card grids, the container-query breakpoint, and dark/light tokens. Set `CHROME_PATH` when Chrome is not in its platform default location.
+
 ## Platforms
 
 The plugin has no platform-specific code: no filesystem access, no child processes, no native modules, and no `os`/`cpu` restriction in the manifest. The Host half is plain ESM with zero dependencies; the Client half uses only Web APIs (`navigator.clipboard`, `document.createElement`, `window.open`).

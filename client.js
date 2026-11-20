@@ -153,6 +153,10 @@ window.__ModuleLoader__.load({
       .ec[data-columns] .ec-items li { break-inside: avoid; }
       /* 卡片组：多张卡片并排（卡片级多列）。 */
       .ec-group { display: flex; flex-direction: column; gap: 6px; }
+      /* 容器查询的锚点：卡片实际宽度由聊天列决定，与视口宽度无关
+         （侧栏展开时列会变窄而视口不变），所以断点必须按容器算。 */
+      .ec-wrap, .ec-group, .ec-cell { container-type: inline-size; }
+      .ec-cell { min-width: 0; display: flex; flex-direction: column; }
       .ec-grid { display: grid; gap: 8px; }
       .ec-grid[data-columns="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .ec-grid[data-columns="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -162,11 +166,19 @@ window.__ModuleLoader__.load({
       .ec-in-grid .ec-head { margin-bottom: 4px; }
       .ec-groupfoot { display: flex; align-items: center; }
       .ec-groupfoot .ec-toggle { margin-left: 0; }
+      /* 窄容器的单列回退：容器查询优先；不支持容器查询的浏览器
+         退回视口断点（保守但不会并排挤出屏幕）。 */
       @media (max-width: 720px) {
         .ec-grid[data-columns="2"],
         .ec-grid[data-columns="3"] { grid-template-columns: 1fr; }
+        .ec[data-columns="2"] .ec-items,
+        .ec[data-columns="3"] .ec-items { column-count: 1; }
+        .ec[data-columns="2"] .ec-metrics,
+        .ec[data-columns="3"] .ec-metrics { grid-template-columns: max-content 1fr; }
       }
-      @media (max-width: 720px) {
+      @container (max-width: 720px) {
+        .ec-grid[data-columns="2"],
+        .ec-grid[data-columns="3"] { grid-template-columns: 1fr; }
         .ec[data-columns="2"] .ec-items,
         .ec[data-columns="3"] .ec-items { column-count: 1; }
         .ec[data-columns="2"] .ec-metrics,
@@ -385,7 +397,8 @@ window.__ModuleLoader__.load({
             h('div', {
               className: 'ec-grid',
               'data-columns': String(card.columns),
-            }, card.cards.map((item, i) => renderCard(item, { withRaw: false, grid: true, index: i }))),
+            }, card.cards.map((item, i) => h('div', { className: 'ec-cell', key: 'cell' + i },
+              renderCard(item, { withRaw: false, grid: true, index: i })))),
             h('div', { className: 'ec-groupfoot' },
               h('button', {
                 type: 'button', className: 'ec-toggle',
