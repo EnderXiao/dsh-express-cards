@@ -1,0 +1,22 @@
+.gitignore
+  h_5aa28205df6603 6-7
+README.md
+  h_5aa28205df6603 76-83
+client.js
+  h_5aa28205df6603 156-159,169-170,174-177,179-181,400-401
+package.json
+  h_5aa28205df6603 44-45,58-60
+scripts/verify.mjs
+  h_5aa28205df6603 1-310
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6c0f19024395e361ca501e7d46e0ba1d16e663cd",
+  "prompts": {},
+  "humans": {
+    "h_5aa28205df6603": {
+      "author": "EnderXiao <EnderXiao@users.noreply.github.com>"
+    }
+  }
+}
