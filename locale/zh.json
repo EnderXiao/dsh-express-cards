@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "结构化表达",
+    "description": "把回复格式纪律注入提示词：结论先行、分段、表格、列表；并把 expresscard 代码块渲染成结论/步骤/指标/提示卡片。流式或解析失败时自动退回普通代码块并附提示，内容不会丢失。在「插件」设置页禁用整行可同时停止提示词注入与卡片渲染；行内 config（enabled/instruction）在 profile 的 cordis.patch.yml 中编辑。"
+  }
+}

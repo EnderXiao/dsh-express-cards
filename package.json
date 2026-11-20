@@ -1,0 +1,58 @@
+{
+  "name": "dsh-express-cards",
+  "version": "0.1.0",
+  "description": "Structured reply formatting for DeepSeek Harness: prompt discipline plus expresscard fences rendered as styled cards.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "EnderXiao",
+    "url": "https://github.com/EnderXiao"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnderXiao/dsh-express-cards.git"
+  },
+  "homepage": "https://github.com/EnderXiao/dsh-express-cards#readme",
+  "bugs": {
+    "url": "https://github.com/EnderXiao/dsh-express-cards/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "markdown",
+    "card",
+    "formatting"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./assets/icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "assets/icon.svg",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "examples"
+  ],
+  "engines": {
+    "node": ">=18",
+    "dsh": "^0.2.2-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Structured replies",
+    "description": "Injects reply-formatting discipline into the agent prompt (conclusion first, sections, tables, lists) and renders `expresscard` code fences as styled cards for conclusions, steps, metrics, and notes. Streaming or unparseable blocks stay plain code with a notice, so content is never lost. Disabling the plugin row in Plugins settings stops both the prompt injection and card rendering; row config (`enabled`, `instruction`) is edited in the profile's cordis.patch.yml."
+  }
+}

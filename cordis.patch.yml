@@ -1,0 +1,9 @@
+# dsh-express-cards 插件装载层。
+#
+# 通过 package.json 的 `dsh.bundle.patch` 声明，`dsh plugin add` 或
+# install_bundle 会自动挂载本行。行内 config（enabled / instruction）
+# 在 profile 的 cordis.patch.yml 中编辑；「插件」设置页只提供整行开/关，
+# 不提供 config 表单（本插件零依赖、无 schema）。
+- insert:
+    - id: express-cards
+      name: dsh-express-cards
