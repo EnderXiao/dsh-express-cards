@@ -1,0 +1,18 @@
+README.md
+  h_5aa28205df6603 76-87
+README.zh.md
+  h_5aa28205df6603 76-87
+client.js
+  h_5aa28205df6603 99-101,106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c456df468c594deb220e54e3c1e5fdc767a48e30",
+  "prompts": {},
+  "humans": {
+    "h_5aa28205df6603": {
+      "author": "EnderXiao <EnderXiao@users.noreply.github.com>"
+    }
+  }
+}
