@@ -1,0 +1,38 @@
+.gitignore
+  h_5aa28205df6603 1-4
+CHANGELOG.md
+  h_5aa28205df6603 1-12
+LICENSE
+  h_5aa28205df6603 1-21
+README.md
+  h_5aa28205df6603 1-86
+README.zh.md
+  h_5aa28205df6603 1-86
+assets/icon.svg
+  h_5aa28205df6603 1-11
+client.js
+  h_5aa28205df6603 1-442
+cordis.patch.yml
+  h_5aa28205df6603 1-9
+examples/README.md
+  h_5aa28205df6603 1-44
+index.js
+  h_5aa28205df6603 1-63
+locale/en.json
+  h_5aa28205df6603 1-6
+locale/zh.json
+  h_5aa28205df6603 1-6
+package.json
+  h_5aa28205df6603 1-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a273ff80005fceda35ae2bf35089f486fe22c607",
+  "prompts": {},
+  "humans": {
+    "h_5aa28205df6603": {
+      "author": "EnderXiao <EnderXiao@users.noreply.github.com>"
+    }
+  }
+}
