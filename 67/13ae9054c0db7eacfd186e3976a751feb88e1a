@@ -1,0 +1,14 @@
+.gitignore
+  h_5aa28205df6603 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6713ae9054c0db7eacfd186e3976a751feb88e1a",
+  "prompts": {},
+  "humans": {
+    "h_5aa28205df6603": {
+      "author": "EnderXiao <EnderXiao@users.noreply.github.com>"
+    }
+  }
+}
